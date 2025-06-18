@@ -40,10 +40,11 @@ This is a custom ergonomic wireless keyboard. The design language is based on th
 | EC05E1220401 | 2 | Rotary encoder | [Mouser](https://www.mouser.dk/ProductDetail/688-EC05E1220401) |
 | SN74HC595DR | 5 | 74HC595 shift register | [Mouser](https://www.mouser.dk/ProductDetail/595-SN74HC595DR) |
 | 102010448 | 1 | Seeed XIAO nrf52840 | [Mouser](https://www.mouser.dk/ProductDetail/713-102010448) or  [Seeed studio](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html) |
-| Kailh Choc V1 | 37 | Kailh Choc V1 switches | |
-| 1 U keycap | 36 | 1 U keycap | |
-| 1.5 U space bar keycap | 1 | 1.5 U space bar keycap | |
-| LiPo Battery | 1 | 3.7V LiPo battery with PH2 connector | |
+| LPR-CHC-SNS-010 | 37 | Kailh Choc Sunset tactile V1 switches | [Splitkb](https://splitkb.com/products/sunset-kailh-low-profile-choc-switches?variant=42742153871619) |
+| KSM-MGG-1UN-010 | 34 | 1u MBK PBT Coloured Blank Keycaps | [Splitkb](https://splitkb.com/products/mbk-pbt-coloured-blank-keycaps?variant=49589854011739) |
+| KSM-MGG-1UH-002 | 2 | 1u MBK PBT Coloured Blank Keycaps (Homing) | [Splitkb](https://splitkb.com/products/mbk-pbt-coloured-blank-keycaps?variant=49589854404955) |
+| KSM-MGG-1U5-002 | 1 | 1.5u MBK PBT Coloured Blank Keycap | [Splitkb](https://splitkb.com/products/mbk-pbt-coloured-blank-keycaps?variant=49589855977819) |
+| AM3144y | 1 | Li-Pol battery 60mAh, 3.7V, 501015 | [Ampul](https://ampul.eu/en/battery/4453-li-pol-battery-60mah-37v-501015) |
 
 ## License
 
