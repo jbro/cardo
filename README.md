@@ -1,6 +1,6 @@
 # Cardo Keyboard
 
-This is a custom ergonomic wireless keyboard. The design language is based on the [Reviung41](https://github.com/gtips/reviung/tree/master) and the key layout is based on the [Atreus](https://atreus.technomancy.us/) keyboard.
+This is a custom ergonomic wireless keyboard. The design language is based on the [Reviung41](https://github.com/gtips/reviung/tree/master) and the key layout is based on the [Atreus](https://atreus.technomancy.us/) keyboard without thumb keys.
 
 ## Features
 
@@ -20,7 +20,7 @@ This is a custom ergonomic wireless keyboard. The design language is based on th
 
 ## Schematics
 
-![schematics](https://raw.githubusercontent.com/gtips/cardo-keyboard/master/images/schematics.png)
+![schematics](https://raw.githubusercontent.com/jbro/cardo/master/images/schematics.png)
 
 ## PCB
 
