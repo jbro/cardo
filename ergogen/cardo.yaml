@@ -1,0 +1,36 @@
+points:
+  key:
+    width: 1cx
+    height: 1cy
+    padding: 1cy
+    spread: 1cx
+  zones:
+    spacebar:
+      key:
+        width: 2cx
+      columns:
+        space:
+      rows:
+        space:
+    matrix:
+      columns:
+        outer:
+        pinky:
+        ring:
+          key.stagger: 3
+        middle:
+          key.stagger: 5
+        index:
+          key.stagger: -5
+        inner:
+          key.stagger: -6
+      rows:
+        bottom:
+        home:
+        top:
+      anchor:
+        ref: spacebar_space_space
+        shift: [-6.6cx, 1.1cy]
+      mirror:
+        ref: spacebar_space_space
+      rotate: -10

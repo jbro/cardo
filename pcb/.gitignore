@@ -1,0 +1,6 @@
+*.lck
+*-bak
+*-cache
+*-backups
+_autosave*
+kbplacer.log
