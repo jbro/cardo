@@ -1,0 +1,35 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        /* One unique printable keycode per physical switch for bring-up testing. */
+        default_layer {
+            bindings = <
+                &kp A  &kp B  &kp C  &kp D  &kp E  &kp F  &kp G  &kp H
+                &kp I  &kp J  &kp K  &kp L  &kp M  &kp N  &kp O  &kp P
+                &kp Q  &kp R  &kp S  &kp T  &kp U  &kp V  &kp W  &kp X
+                &kp Y  &kp Z  &kp N0 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
+                &kp N6 &kp N7 &kp N8 &kp N9 &kp COMMA
+            >;
+            sensor-bindings = <&inc_dec_kp A B>,
+                              <&inc_dec_kp C D>;
+        };
+
+        lower_layer {
+            bindings = <
+                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp F1 &kp F2
+                &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
+                &kp F11 &kp F12 &kp HOME &kp END &kp UP &kp LEFT &kp DOWN &kp RIGHT
+                &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PRINTSCREEN &kp INSERT &kp PAUSE_BREAK &trans
+                &trans &trans &trans &trans &trans &trans
+            >;
+            sensor-bindings = <&inc_dec_kp E F>,
+                              <&inc_dec_kp G H>;
+        };
+    };
+};

@@ -1,0 +1,6 @@
+if SHIELD_CARDO
+
+config ZMK_KEYBOARD_NAME
+    default "Cardo"
+
+endif

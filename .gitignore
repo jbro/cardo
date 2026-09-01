@@ -1,1 +1,14 @@
+# West-managed ZMK/Zephyr workspace
+.west/
+modules/
+optional/
+zephyr/
+zmk/
 
+# Local build output
+build/
+
+# Firmware artifacts (also produced outside build/ by some tooling)
+*.uf2
+*.hex
+*.bin

@@ -1,0 +1,9 @@
+file_format: "1"
+id: cardo
+name: Cardo
+type: shield
+url: https://github.com/jbro/cardo
+requires: [seeed_xiao]
+features:
+  - keys
+  - encoder
