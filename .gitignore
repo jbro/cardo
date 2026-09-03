@@ -8,6 +8,9 @@ zmk/
 # Local build output
 build/
 
+# KiCad local history
+pcb/.history/
+
 # Firmware artifacts (also produced outside build/ by some tooling)
 *.uf2
 *.hex
