@@ -15,31 +15,34 @@
         diode-direction = "col2row";
 
         /* U1-U2 (ROW1_CS), then U3/U5-U6 (ROW2_CS). */
+        /* SN74HCS596 open-drain outputs: selected columns sink current and
+         * inactive columns remain high-impedance.
+         */
         col-gpios =
-            <&shifter_row1 0 GPIO_ACTIVE_HIGH>, <&shifter_row1 1 GPIO_ACTIVE_HIGH>,
-            <&shifter_row1 2 GPIO_ACTIVE_HIGH>, <&shifter_row1 3 GPIO_ACTIVE_HIGH>,
-            <&shifter_row1 4 GPIO_ACTIVE_HIGH>, <&shifter_row1 5 GPIO_ACTIVE_HIGH>,
-            <&shifter_row1 6 GPIO_ACTIVE_HIGH>, <&shifter_row1 7 GPIO_ACTIVE_HIGH>,
-            <&shifter_row1 8 GPIO_ACTIVE_HIGH>, <&shifter_row1 9 GPIO_ACTIVE_HIGH>,
-            <&shifter_row1 10 GPIO_ACTIVE_HIGH>, <&shifter_row1 11 GPIO_ACTIVE_HIGH>,
-            <&shifter_row1 12 GPIO_ACTIVE_HIGH>, <&shifter_row1 13 GPIO_ACTIVE_HIGH>,
-            <&shifter_row1 14 GPIO_ACTIVE_HIGH>, <&shifter_row1 15 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 0 GPIO_ACTIVE_HIGH>, <&shifter_row2 1 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 2 GPIO_ACTIVE_HIGH>, <&shifter_row2 3 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 4 GPIO_ACTIVE_HIGH>, <&shifter_row2 5 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 6 GPIO_ACTIVE_HIGH>, <&shifter_row2 7 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 8 GPIO_ACTIVE_HIGH>, <&shifter_row2 9 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 10 GPIO_ACTIVE_HIGH>, <&shifter_row2 11 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 12 GPIO_ACTIVE_HIGH>, <&shifter_row2 13 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 14 GPIO_ACTIVE_HIGH>, <&shifter_row2 15 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 16 GPIO_ACTIVE_HIGH>, <&shifter_row2 17 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 18 GPIO_ACTIVE_HIGH>, <&shifter_row2 19 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 20 GPIO_ACTIVE_HIGH>, <&shifter_row2 21 GPIO_ACTIVE_HIGH>,
-            <&shifter_row2 22 GPIO_ACTIVE_HIGH>, <&shifter_row2 23 GPIO_ACTIVE_HIGH>;
+            <&shifter_row1 0 GPIO_ACTIVE_LOW>, <&shifter_row1 1 GPIO_ACTIVE_LOW>,
+            <&shifter_row1 2 GPIO_ACTIVE_LOW>, <&shifter_row1 3 GPIO_ACTIVE_LOW>,
+            <&shifter_row1 4 GPIO_ACTIVE_LOW>, <&shifter_row1 5 GPIO_ACTIVE_LOW>,
+            <&shifter_row1 6 GPIO_ACTIVE_LOW>, <&shifter_row1 7 GPIO_ACTIVE_LOW>,
+            <&shifter_row1 8 GPIO_ACTIVE_LOW>, <&shifter_row1 9 GPIO_ACTIVE_LOW>,
+            <&shifter_row1 10 GPIO_ACTIVE_LOW>, <&shifter_row1 11 GPIO_ACTIVE_LOW>,
+            <&shifter_row1 12 GPIO_ACTIVE_LOW>, <&shifter_row1 13 GPIO_ACTIVE_LOW>,
+            <&shifter_row1 14 GPIO_ACTIVE_LOW>, <&shifter_row1 15 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 0 GPIO_ACTIVE_LOW>, <&shifter_row2 1 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 2 GPIO_ACTIVE_LOW>, <&shifter_row2 3 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 4 GPIO_ACTIVE_LOW>, <&shifter_row2 5 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 6 GPIO_ACTIVE_LOW>, <&shifter_row2 7 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 8 GPIO_ACTIVE_LOW>, <&shifter_row2 9 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 10 GPIO_ACTIVE_LOW>, <&shifter_row2 11 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 12 GPIO_ACTIVE_LOW>, <&shifter_row2 13 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 14 GPIO_ACTIVE_LOW>, <&shifter_row2 15 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 16 GPIO_ACTIVE_LOW>, <&shifter_row2 17 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 18 GPIO_ACTIVE_LOW>, <&shifter_row2 19 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 20 GPIO_ACTIVE_LOW>, <&shifter_row2 21 GPIO_ACTIVE_LOW>,
+            <&shifter_row2 22 GPIO_ACTIVE_LOW>, <&shifter_row2 23 GPIO_ACTIVE_LOW>;
 
         /* XIAO D0/D2: ROW1 and ROW2 switch inputs. */
-        row-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        row-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+                    <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 
     default_transform: matrix_transform {
@@ -100,7 +103,7 @@
         gpio-controller;
         #gpio-cells = <2>;
         ngpios = <16>;
-        spi-max-frequency = <1000000>;
+        spi-max-frequency = <4000000>;
     };
 
     shifter_row2: gpio595_row2@1 {
@@ -110,6 +113,6 @@
         gpio-controller;
         #gpio-cells = <2>;
         ngpios = <24>;
-        spi-max-frequency = <1000000>;
+        spi-max-frequency = <4000000>;
     };
 };
