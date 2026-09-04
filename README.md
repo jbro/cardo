@@ -18,6 +18,10 @@ This is a custom ergonomic wireless keyboard. The design language is based on th
 - Seeed XIAO nrf52840 micro controller
 - 3D printable case (TBD)
 
+## Keymap
+
+![keymap](images/cardo-keymap.png)
+
 ## Schematics
 
 ![schematics](https://raw.githubusercontent.com/jbro/cardo/master/images/schematics.png)
