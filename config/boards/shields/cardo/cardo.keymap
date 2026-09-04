@@ -2,9 +2,34 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
+        mouse_move_horizontal: mouse_move_horizontal {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&mmv MOVE_LEFT>, <&mmv MOVE_RIGHT>;
+        };
+
+        mouse_move_vertical: mouse_move_vertical {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&mmv MOVE_DOWN>, <&mmv MOVE_UP>;
+        };
+
+        mouse_scroll_horizontal: mouse_scroll_horizontal {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+        };
+
+        mouse_scroll_vertical: mouse_scroll_vertical {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        };
+
         hm: home_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -20,6 +45,9 @@
         compatible = "zmk,keymap";
 
         base {
+            sensor-bindings = <&mouse_move_horizontal>,
+                              <&mouse_move_vertical>;
+
             bindings = <
                 &kp ESC       &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
                 &kp TAB       &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SEMICOLON &kp ENTER
@@ -29,15 +57,21 @@
         };
 
         lower {
+            sensor-bindings = <&mouse_scroll_horizontal>,
+                              <&mouse_scroll_vertical>;
+
             bindings = <
                 &none         &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp DELETE
-                &none         &kp GRAVE   &none       &none       &none       &none       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp APOSTROPHE &none
+                &none         &kp GRAVE   &mkp LCLK   &mkp MCLK   &mkp RCLK   &none       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp APOSTROPHE &none
                 &none         &kp BACKSLASH &none      &none       &none       &none       &none       &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT     &none
                 &kp K_APP
             >;
         };
 
         upper {
+            sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>,
+                              <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
             bindings = <
                 &to 3         &kp F1      &kp F2      &kp F3      &kp F4      &none       &kp INSERT  &kp PRINTSCREEN &kp SCROLLLOCK &kp PAUSE_BREAK &kp C_VOL_UP &none
                 &none         &kp F5      &kp F6      &kp F7      &kp F8      &none       &kp HOME    &kp PAGE_DOWN &kp PAGE_UP &kp END     &kp C_VOL_DN &none
