@@ -4,32 +4,66 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    behaviors {
+        hm: home_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        /* One unique printable keycode per physical switch for bring-up testing. */
-        default_layer {
+        base {
             bindings = <
-                &kp A  &kp B  &kp C  &kp D  &kp E  &kp F  &kp G  &kp H
-                &kp I  &kp J  &kp K  &kp L  &kp M  &kp N  &kp O  &kp P
-                &kp Q  &kp R  &kp S  &kp T  &kp U  &kp V  &kp W  &kp X
-                &kp Y  &kp Z  &kp N0 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
-                &kp N6 &kp N7 &kp N8 &kp N9 &mo 1
+                &kp ESC       &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
+                &kp TAB       &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SEMICOLON &kp ENTER
+                &kp LSHIFT    &hm LCTRL Z  &hm LALT X  &hm LGUI C  &lt 1 V       &lt 2 B       &lt 2 N       &lt 1 M       &hm LGUI COMMA &hm LALT DOT &hm LCTRL SLASH &kp RSHIFT
+                &kp SPACE
             >;
-            sensor-bindings = <&inc_dec_kp A B>,
-                              <&inc_dec_kp C D>;
         };
 
-        lower_layer {
+        lower {
             bindings = <
-                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp F1 &kp F2
-                &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
-                &kp F11 &kp F12 &kp HOME &kp END &kp UP &kp LEFT &kp DOWN &kp RIGHT
-                &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PRINTSCREEN &kp INSERT &kp PAUSE_BREAK &trans
-                &trans &trans &trans &trans &trans &trans
+                &none         &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp DELETE
+                &none         &kp GRAVE   &none       &none       &none       &none       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp APOSTROPHE &none
+                &none         &kp BACKSLASH &none      &none       &none       &none       &none       &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT     &none
+                &kp K_APP
             >;
-            sensor-bindings = <&inc_dec_kp E F>,
-                              <&inc_dec_kp G H>;
+        };
+
+        upper {
+            bindings = <
+                &to 3         &kp F1      &kp F2      &kp F3      &kp F4      &none       &kp INSERT  &kp PRINTSCREEN &kp SCROLLLOCK &kp PAUSE_BREAK &kp C_VOL_UP &none
+                &none         &kp F5      &kp F6      &kp F7      &kp F8      &none       &kp HOME    &kp PAGE_DOWN &kp PAGE_UP &kp END     &kp C_VOL_DN &none
+                &none         &kp F9      &kp F10     &kp F11     &kp F12     &none       &none       &kp C_PAUSE &kp C_PREV  &kp C_NEXT  &kp C_MUTE   &none
+                &none
+            >;
+        };
+
+        sys {
+            bindings = <
+                &to 0 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR &none &none &none &none &bootloader
+                &none &out OUT_BLE &out OUT_USB &none &none &none &none &none &none &none &none &none
+                &sys_reset &none &none &none &none &none &none &none &none &none &none &none
+                &none
+            >;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        caps_lock_combo {
+            timeout-ms = <50>;
+            key-positions = <24 35>;
+            layers = <0>;
+            bindings = <&kp CAPSLOCK>;
         };
     };
 };
