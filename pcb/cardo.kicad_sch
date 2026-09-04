@@ -6133,7 +6133,7 @@
 				)
 			)
 		)
-		(property "Value" "74HC595"
+		(property "Value" "SN74HCS596DR"
 			(at 63.5 105.0446 90)
 			(effects
 				(font
@@ -6150,7 +6150,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hcs596.pdf"
 			(at 41.91 107.95 0)
 			(effects
 				(font
@@ -6159,7 +6159,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "8-bit serial in/out Shift Register 3-State Outputs"
+		(property "Description" "Texas Instruments 8-bit shift register with Schmitt-trigger inputs and open-drain outputs"
+			(at 41.91 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 41.91 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SN74HCS596DR"
 			(at 41.91 107.95 0)
 			(effects
 				(font
@@ -6309,7 +6327,7 @@
 				)
 			)
 		)
-		(property "Value" "74HC595"
+		(property "Value" "SN74HCS596DR"
 			(at 63.5 47.8946 90)
 			(effects
 				(font
@@ -6326,7 +6344,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hcs596.pdf"
 			(at 41.91 50.8 0)
 			(effects
 				(font
@@ -6335,7 +6353,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "8-bit serial in/out Shift Register 3-State Outputs"
+		(property "Description" "Texas Instruments 8-bit shift register with Schmitt-trigger inputs and open-drain outputs"
+			(at 41.91 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 41.91 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SN74HCS596DR"
 			(at 41.91 50.8 0)
 			(effects
 				(font
@@ -9255,7 +9291,7 @@
 				)
 			)
 		)
-		(property "Value" "74HC595"
+		(property "Value" "SN74HCS596DR"
 			(at 208.28 105.0446 90)
 			(effects
 				(font
@@ -9272,7 +9308,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hcs596.pdf"
 			(at 186.69 107.95 0)
 			(effects
 				(font
@@ -9281,7 +9317,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "8-bit serial in/out Shift Register 3-State Outputs"
+		(property "Description" "Texas Instruments 8-bit shift register with Schmitt-trigger inputs and open-drain outputs"
+			(at 186.69 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 186.69 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SN74HCS596DR"
 			(at 186.69 107.95 0)
 			(effects
 				(font
@@ -9433,7 +9487,7 @@
 				)
 			)
 		)
-		(property "Value" "74HC595"
+		(property "Value" "SN74HCS596DR"
 			(at 208.28 162.1946 90)
 			(effects
 				(font
@@ -9450,7 +9504,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hcs596.pdf"
 			(at 186.69 165.1 0)
 			(effects
 				(font
@@ -9459,7 +9513,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "8-bit serial in/out Shift Register 3-State Outputs"
+		(property "Description" "Texas Instruments 8-bit shift register with Schmitt-trigger inputs and open-drain outputs"
+			(at 186.69 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 186.69 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SN74HCS596DR"
 			(at 186.69 165.1 0)
 			(effects
 				(font
@@ -10777,7 +10849,7 @@
 				)
 			)
 		)
-		(property "Value" "74HC595"
+		(property "Value" "SN74HCS596DR"
 			(at 208.28 47.8946 90)
 			(effects
 				(font
@@ -10794,7 +10866,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hcs596.pdf"
 			(at 186.69 50.8 0)
 			(effects
 				(font
@@ -10803,7 +10875,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "8-bit serial in/out Shift Register 3-State Outputs"
+		(property "Description" "Texas Instruments 8-bit shift register with Schmitt-trigger inputs and open-drain outputs"
+			(at 186.69 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 186.69 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SN74HCS596DR"
 			(at 186.69 50.8 0)
 			(effects
 				(font

@@ -42,7 +42,7 @@ This is a custom ergonomic wireless keyboard. The design language is based on th
 | SSAJ110100 | 1 | Slide switch | [Mouser](https://www.mouser.dk/ProductDetail/688-SSAJ110100) |
 | 7305-0-15-15-47-27-10-0 | 74 | Mill Max 7305 "hot swap" socket | [Mouser](https://www.mouser.dk/ProductDetail/575-7305015154727100) |
 | EC05E1220401 | 2 | Rotary encoder | [Mouser](https://www.mouser.dk/ProductDetail/688-EC05E1220401) |
-| SN74HC595DR | 5 | 74HC595 shift register | [Mouser](https://www.mouser.dk/ProductDetail/595-SN74HC595DR) |
+| SN74HCS596DR | 5 | TI shift register with open-drain outputs | [Mouser](https://www.mouser.dk/ProductDetail/Texas-Instruments/SN74HCS596DR) |
 | 102010448 | 1 | Seeed XIAO nrf52840 | [Mouser](https://www.mouser.dk/ProductDetail/713-102010448) or  [Seeed studio](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html) |
 | LPR-CHC-SNS-010 | 37 | Kailh Choc Sunset tactile V1 switches | [Splitkb](https://splitkb.com/products/sunset-kailh-low-profile-choc-switches?variant=42742153871619) |
 | KSM-MGG-1UN-010 | 34 | 1u MBK PBT Coloured Blank Keycaps | [Splitkb](https://splitkb.com/products/mbk-pbt-coloured-blank-keycaps?variant=49589854011739) |
