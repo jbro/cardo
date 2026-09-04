@@ -5,6 +5,16 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
+        zmk,battery = &vbatt;
+    };
+
+    /* The XIAO nRF52840 has an onboard, switchable battery divider. */
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 7>;
+        power-gpios = <&gpio0 14 (GPIO_OPEN_DRAIN | GPIO_ACTIVE_LOW)>;
+        output-ohms = <510000>;
+        full-ohms = <1510000>;
     };
 
     /* The PCB has two electrically independent shift-register chains.
