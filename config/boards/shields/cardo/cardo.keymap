@@ -5,8 +5,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define BASE  0
-#define LOWER 1
-#define UPPER 2
+#define UPPER 1
+#define LOWER 2
 #define SYS   3
 
 /* Make layer-taps resolve like the home-row mod-taps below. */
@@ -69,7 +69,7 @@
             >;
         };
 
-        lower {
+        upper {
             sensor-bindings = <&mouse_scroll_horizontal>,
                               <&mouse_scroll_vertical>;
 
@@ -81,7 +81,7 @@
             >;
         };
 
-        upper {
+        lower {
             sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>,
                               <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 
