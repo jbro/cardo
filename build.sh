@@ -11,7 +11,7 @@ docker run --rm \
   "${IMAGE}" \
   /bin/bash -lc '
     git config --global --add safe.directory /workdir
-    west build -p always -s zmk/app -b xiao_ble -- \
+    west build -p always -s zmk/app -b xiao_ble//zmk -- \
       -DZMK_CONFIG=/workdir/config \
       -DSHIELD=cardo \
       -DZephyr_DIR=/workdir/zephyr/share/zephyr-package/cmake
